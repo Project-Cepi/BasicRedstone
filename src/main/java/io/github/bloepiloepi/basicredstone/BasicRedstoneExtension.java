@@ -26,6 +26,8 @@ public class BasicRedstoneExtension extends Extension {
 	@Override
 	public void initialize() {
 		getEventNode().addChild(REDSTONE_EVENTS);
+
+		// TODO remove instance when it is unloaded
 	}
 	
 	@Override
