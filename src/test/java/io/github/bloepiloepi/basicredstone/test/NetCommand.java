@@ -14,7 +14,7 @@ public class NetCommand extends Command {
 		setCondition(Conditions::playerOnly);
 		
 		setDefaultExecutor((sender, args) -> {
-			Player player = sender.asPlayer();
+			Player player = (Player) sender;
 			PowerNet powerNet = Redstone.getPowerNet(player.getInstance());
 			player.sendMessage(powerNet.toString());
 		});

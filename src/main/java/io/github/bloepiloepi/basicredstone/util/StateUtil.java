@@ -30,13 +30,10 @@ public class StateUtil {
 	}
 	
 	public static BlockFace getConnectedBlockFace(Block block) {
-		switch (StateUtil.getFace(block)) {
-			case FLOOR:
-				return BlockFace.TOP;
-			case CEILING:
-				return BlockFace.BOTTOM;
-			default:
-				return StateUtil.getFacing(block);
-		}
+		return switch (StateUtil.getFace(block)) {
+			case FLOOR -> BlockFace.TOP;
+			case CEILING -> BlockFace.BOTTOM;
+			default -> StateUtil.getFacing(block);
+		};
 	}
 }

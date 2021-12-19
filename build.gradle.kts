@@ -19,6 +19,9 @@ repositories {
 dependencies {
     // Compile Minestom into project
     compileOnly("com.github.Minestom:Minestom:ad533533a4")
+
+    // Use the JUpiter test library.
+    testImplementation("org.junit.jupiter:junit-jupiter:5.8.1")
 }
 
 configurations {
@@ -29,15 +32,7 @@ configurations {
 
 // Take gradle.properties and apply it to resources.
 tasks {
-    processResources {
-        // Apply properties to extension.json
-        filesMatching("extension.json") {
-            expand(project.properties)
-        }
-    }
-
     test { useJUnitPlatform() }
-
 }
 
 java {

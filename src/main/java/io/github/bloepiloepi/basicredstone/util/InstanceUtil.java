@@ -15,11 +15,7 @@ public class InstanceUtil {
 	
 	public static void sendNearby(@Nullable Player source, @NotNull Instance instance, @NotNull Effects effect,
 	                              int x, int y, int z, int data, double distance, boolean global) {
-		EffectPacket packet = new EffectPacket();
-		packet.effectId = effect.getId();
-		packet.position = new Pos(x, y, z);
-		packet.data = data;
-		packet.disableRelativeVolume = global;
+		EffectPacket packet = new EffectPacket(effect.getId(), new Pos(x, y, z), data, global);
 		
 		double distanceSquaredMax = distance * distance;
 		PacketUtils.sendGroupedPacket(instance.getPlayers(), packet, player -> {

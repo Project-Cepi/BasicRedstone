@@ -1,12 +1,8 @@
 package io.github.bloepiloepi.basicredstone.test;
 
-import io.github.bloepiloepi.basicredstone.BasicRedstoneExtension;
-import io.github.bloepiloepi.basicredstone.redstone.PowerNet;
-import io.github.bloepiloepi.basicredstone.redstone.Redstone;
 import net.minestom.server.MinecraftServer;
 import net.minestom.server.coordinate.Pos;
 import net.minestom.server.entity.GameMode;
-import net.minestom.server.event.GlobalEventHandler;
 import net.minestom.server.event.player.PlayerLoginEvent;
 import net.minestom.server.event.player.PlayerSpawnEvent;
 import net.minestom.server.extras.lan.OpenToLAN;
